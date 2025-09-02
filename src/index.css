@@ -1,96 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Pravesh 2k25 Design System - Theater meets Modern Event */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Core Pravesh Brand Colors - HSL Format */
+    --pravesh-red: 0 100% 50%;
+    --pravesh-blue: 240 100% 50%;
+    --pravesh-gold: 51 100% 50%;
+    --pravesh-white: 0 0% 100%;
+    --pravesh-black: 0 0% 0%;
+    
+    /* Gradients */
+    --gradient-curtain: linear-gradient(135deg, hsl(var(--pravesh-red)), hsl(var(--pravesh-blue)));
+    --gradient-hero: linear-gradient(180deg, hsl(var(--pravesh-black)) 0%, hsl(var(--pravesh-red) / 0.1) 100%);
+    --gradient-spotlight: radial-gradient(circle, hsl(var(--pravesh-gold) / 0.3) 0%, transparent 70%);
+    
+    /* Shadows & Effects */
+    --shadow-dramatic: 0 25px 50px -12px hsl(var(--pravesh-red) / 0.4);
+    --shadow-glow-red: 0 0 30px hsl(var(--pravesh-red) / 0.6);
+    --shadow-glow-blue: 0 0 30px hsl(var(--pravesh-blue) / 0.6);
+    --shadow-gold: 0 4px 20px hsl(var(--pravesh-gold) / 0.3);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-dramatic: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
+    /* Standard System Colors */
+    --background: 0 0% 4%;
+    --foreground: 0 0% 98%;
+    
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 98%;
+    
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 98%;
+    
+    --primary: var(--pravesh-red);
+    --primary-foreground: var(--pravesh-white);
+    
+    --secondary: var(--pravesh-blue);
+    --secondary-foreground: var(--pravesh-white);
+    
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+    
+    --accent: var(--pravesh-gold);
+    --accent-foreground: var(--pravesh-black);
+    
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: var(--pravesh-red);
+    
+    --radius: 0.75rem;
   }
+}
 
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-montserrat;
+    overflow-x: hidden;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+@layer components {
+  /* Pravesh Theater Curtains */
+  .curtain {
+    @apply fixed inset-0 z-50 pointer-events-none;
+  }
+  
+  .curtain-left {
+    @apply absolute left-0 top-0 w-1/2 h-full;
+    background: var(--gradient-curtain);
+    transform: translateX(0);
+    transition: transform 2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .curtain-right {
+    @apply absolute right-0 top-0 w-1/2 h-full;
+    background: var(--gradient-curtain);
+    transform: translateX(0);
+    transition: transform 2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .curtain-open .curtain-left {
+    transform: translateX(-100%);
+  }
+  
+  .curtain-open .curtain-right {
+    transform: translateX(100%);
+  }
+  
+  /* Pravesh Logo Glow */
+  .logo-glow {
+    filter: drop-shadow(var(--shadow-glow-red)) drop-shadow(var(--shadow-glow-blue));
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+  
+  /* Spotlight Effect */
+  .spotlight {
+    background: var(--gradient-spotlight);
+    animation: spotlight-move 8s ease-in-out infinite;
+  }
+  
+  /* Countdown Numbers */
+  .countdown-digit {
+    @apply text-6xl md:text-8xl font-black text-transparent bg-clip-text;
+    background-image: var(--gradient-curtain);
+    filter: drop-shadow(var(--shadow-gold));
+    animation: digit-pulse 1s ease-in-out infinite;
+  }
+  
+  /* Event Card Hover */
+  .event-card {
+    @apply transition-all duration-300 hover:scale-105;
+    box-shadow: var(--shadow-dramatic);
+  }
+  
+  .event-card:hover {
+    box-shadow: var(--shadow-glow-red);
+  }
+  
+  /* Sponsor Logo Effects */
+  .sponsor-logo {
+    @apply transition-all duration-300 hover:scale-110 grayscale hover:grayscale-0;
+    filter: brightness(0.8);
+  }
+  
+  .sponsor-logo:hover {
+    filter: brightness(1) drop-shadow(var(--shadow-gold));
+  }
+}
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+@layer utilities {
+  /* Pravesh Typography */
+  .font-montserrat {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .text-hero {
+    @apply text-6xl md:text-8xl lg:text-9xl font-black;
+  }
+  
+  .text-display {
+    @apply text-4xl md:text-6xl font-bold;
+  }
+  
+  .text-title {
+    @apply text-2xl md:text-4xl font-bold;
+  }
+  
+  /* Pravesh Gradients */
+  .bg-gradient-pravesh {
+    background: var(--gradient-curtain);
+  }
+  
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  /* Pravesh Effects */
+  .glow-red {
+    box-shadow: var(--shadow-glow-red);
+  }
+  
+  .glow-blue {
+    box-shadow: var(--shadow-glow-blue);
+  }
+  
+  .glow-gold {
+    box-shadow: var(--shadow-gold);
+  }
+}
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+/* Keyframe Animations */
+@keyframes pulse-glow {
+  0%, 100% {
+    filter: drop-shadow(var(--shadow-glow-red)) drop-shadow(var(--shadow-glow-blue));
+  }
+  50% {
+    filter: drop-shadow(0 0 40px hsl(var(--pravesh-red) / 0.8)) drop-shadow(0 0 40px hsl(var(--pravesh-blue) / 0.8));
+  }
+}
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+@keyframes spotlight-move {
+  0%, 100% { transform: translateX(-10%) scale(1); }
+  50% { transform: translateX(10%) scale(1.1); }
+}
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+@keyframes digit-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
