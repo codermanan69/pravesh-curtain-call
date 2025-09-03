@@ -18,6 +18,9 @@ document.addEventListener('DOMContentLoaded', function() {
         if (curtain) curtain.classList.add('hidden');
         if (mainContent) mainContent.classList.add('visible');
     }
+
+    // Curtain fail-safe: ensure content is visible even if animation fails
+    ensureContentVisibleFailsafe();
     
     // Initialize countdown timer
     initializeCountdown();
@@ -35,6 +38,24 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize smooth scrolling for anchor links
     initializeSmoothScrolling(reduceMotion);
 });
+
+// Also ensure after full window load
+window.addEventListener('load', ensureContentVisibleFailsafe);
+
+function ensureContentVisibleFailsafe() {
+    const curtain = document.getElementById('curtain');
+    const mainContent = document.getElementById('main-content');
+    if (!curtain || !mainContent) return;
+
+    // If already visible, skip
+    if (mainContent.classList.contains('visible')) return;
+
+    // Use a short timeout to allow normal animation, but force-show if stuck
+    setTimeout(() => {
+        curtain.classList.add('hidden');
+        mainContent.classList.add('visible');
+    }, 3000); // force reveal after 3s max
+}
 
 // Curtain Animation
 function initializeCurtainAnimation() {
