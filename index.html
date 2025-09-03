@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#0b0b12">
+    <title>Pravesh 2K25 - Ultimate Freshers Party | October 11, 2025</title>
+    <meta name="description" content="Join Pravesh 2K25 - The ultimate freshers party experience! October 11, 2025 at Grand Banquet Hall. Unlimited food, AC venue, live performances. Book your pass now!">
+    <meta name="author" content="Pravesh 2K25 Organizing Committee">
+    <meta name="keywords" content="Pravesh 2K25, freshers party, college event, October 2025, unlimited food, AC banquet, live performances, book tickets">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Pravesh 2K25 - Ultimate Freshers Party | October 11, 2025">
+    <meta property="og:description" content="The biggest freshers party of the year! Join us for unlimited food, AC banquet, live performances and unforgettable memories. Book your pass now!">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png">
+    
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@lovable_dev">
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Curtain Animation -->
+    <div id="curtain" class="curtain">
+        <div class="curtain-left">
+            <div class="curtain-gradient-left"></div>
+            <div class="curtain-pattern"></div>
+        </div>
+        <div class="curtain-right">
+            <div class="curtain-gradient-right"></div>
+            <div class="curtain-pattern"></div>
+        </div>
+        <div class="curtain-logo">
+            <div class="curtain-logo-text">PRAVESH 2K25</div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content" class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-background">
+                <div class="spotlight"></div>
+                <div class="floating-particles"></div>
+            </div>
+            
+            <div class="container">
+                <div class="hero-content">
+                    <!-- Logo Section -->
+                    <div class="logo-section">
+                        <img src="assets/pravesh-logo.png" alt="Pravesh 2k25 Logo" class="hero-logo" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <div class="hero-logo-fallback" style="display:none" aria-hidden="true">PRAVESH 2K25</div>
+                    </div>
+
+                    <!-- Main Heading -->
+                    <div class="hero-heading">
+                        <h1 class="hero-title">PRAVESH 2K25</h1>
+                        <p class="hero-subtitle">The Ultimate Freshers Party Experience</p>
+                    </div>
+
+                    <!-- Event Details -->
+                    <div class="event-details-card">
+                        <h2 class="event-date">October 11th, 2025</h2>
+                        <p class="event-time">11:00 AM – 7:00 PM • <a href="https://share.google/j3tSKxfljUuSP0ZOX" target="_blank" rel="noopener" class="venue-link">Kameshwar Palace A.C. Banquet Hall</a></p>
+                        <div class="event-features">
+                            <span class="feature-tag feature-red">🍽️ Unlimited Food</span>
+                            <span class="feature-tag feature-blue">❄️ AC Banquet</span>
+                            <span class="feature-tag feature-gold">🎵 Live Performances</span>
+                        </div>
+                    </div>
+
+                    <!-- Countdown Timer -->
+                    <div class="countdown-section">
+                        <div class="countdown-container">
+                            <div class="countdown-header">
+                                <h3 class="countdown-title">Event Countdown</h3>
+                                <p class="countdown-subtitle">October 11th, 2025 • 11:00 AM – 7:00 PM</p>
+                            </div>
+                            <div class="countdown-timer">
+                                <div class="time-unit">
+                                    <div class="countdown-digit" id="days">00</div>
+                                    <div class="countdown-label">Days</div>
+                                </div>
+                                <div class="countdown-separator">:</div>
+                                <div class="time-unit">
+                                    <div class="countdown-digit" id="hours">00</div>
+                                    <div class="countdown-label">Hours</div>
+                                </div>
+                                <div class="countdown-separator">:</div>
+                                <div class="time-unit">
+                                    <div class="countdown-digit" id="minutes">00</div>
+                                    <div class="countdown-label">Minutes</div>
+                                </div>
+                                <div class="countdown-separator">:</div>
+                                <div class="time-unit">
+                                    <div class="countdown-digit" id="seconds">00</div>
+                                    <div class="countdown-label">Seconds</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CTA Button -->
+                    <div class="cta-section">
+                        <button class="cta-button" onclick="bookNow()" aria-label="Book your pass now">
+                            🎫 Book Your Pass Now
+                        </button>
+                        <p class="cta-note">⚡ Limited Passes Available • Book Fast!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Event Details Section -->
+        <section class="details-section" id="details">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Event Highlights</h2>
+                    <p class="section-subtitle">Get ready for the most spectacular freshers party of the year! Here's what awaits you.</p>
+                </div>
+
+                <!-- Event Info Cards -->
+                <div class="event-info-grid">
+                    <div class="event-info-card">
+                        <div class="info-icon info-icon-red">
+                            <i data-lucide="calendar"></i>
+                        </div>
+                        <h3 class="info-title">Date</h3>
+                        <p class="info-value">October 11th, 2025</p>
+                    </div>
+                    <div class="event-info-card">
+                        <div class="info-icon info-icon-blue">
+                            <i data-lucide="clock"></i>
+                        </div>
+                        <h3 class="info-title">Time</h3>
+                        <p class="info-value">11:00 AM – 7:00 PM</p>
+                    </div>
+                    <div class="event-info-card">
+                        <div class="info-icon info-icon-gold">
+                            <i data-lucide="map-pin"></i>
+                        </div>
+                        <h3 class="info-title">Venue</h3>
+                        <p class="info-value"><a href="https://share.google/j3tSKxfljUuSP0ZOX" target="_blank" rel="noopener" class="venue-link">Kameshwar Palace A.C. Banquet Hall</a></p>
+                    </div>
+                </div>
+
+                <!-- Highlights Grid -->
+                <div class="highlights-grid">
+                    <div class="highlight-card">
+                        <div class="highlight-icon highlight-icon-red">
+                            <i data-lucide="utensils"></i>
+                        </div>
+                        <h3 class="highlight-title">Unlimited Food</h3>
+                        <p class="highlight-description">Delicious dinner buffet with variety of cuisines</p>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon highlight-icon-blue">
+                            <i data-lucide="map-pin"></i>
+                        </div>
+                        <h3 class="highlight-title">AC Banquet Hall</h3>
+                        <p class="highlight-description">Premium air-conditioned venue with elegant ambiance</p>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon highlight-icon-gold">
+                            <i data-lucide="music"></i>
+                        </div>
+                        <h3 class="highlight-title">Live Performances</h3>
+                        <p class="highlight-description">Amazing live music, dance performances & entertainment</p>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon highlight-icon-red">
+                            <i data-lucide="users"></i>
+                        </div>
+                        <h3 class="highlight-title">Interactive Games</h3>
+                        <p class="highlight-description">Fun games, prizes, and networking opportunities</p>
+                    </div>
+                </div>
+
+                <!-- Special Note -->
+                <div class="special-note">
+                    <h3 class="special-note-title">🎉 Special Welcome for Freshers 🎉</h3>
+                    <p class="special-note-text">
+                        This is your moment to shine! Join your seniors and fellow freshers for an unforgettable evening 
+                        of fun, food, and friendships. Come dressed to impress and get ready to create memories that 
+                        will last a lifetime!
+                    </p>
+                    <div class="special-note-tags">
+                        <span class="special-tag special-tag-red">Smart Casual Dress Code</span>
+                        <span class="special-tag special-tag-blue">Photography Allowed</span>
+                        <span class="special-tag special-tag-gold">Networking Opportunities</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sponsors Section -->
+        <section class="sponsors-section" id="sponsors">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Our Proud Sponsors</h2>
+                    <p class="section-subtitle">Special thanks to our amazing sponsors who make Pravesh 2k25 possible!</p>
+                </div>
+
+                <!-- Title Sponsors -->
+                <div class="sponsor-tier">
+                    <h3 class="sponsor-tier-title sponsor-tier-gold">Title Sponsors</h3>
+                    <div class="sponsor-grid">
+                        <div class="sponsor-card sponsor-card-large">
+                            <div class="sponsor-logo">🚀</div>
+                            <p class="sponsor-name">TechCorp</p>
+                        </div>
+                        <div class="sponsor-card sponsor-card-large">
+                            <div class="sponsor-logo">💡</div>
+                            <p class="sponsor-name">InnovateLab</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gold Sponsors -->
+                <div class="sponsor-tier">
+                    <h3 class="sponsor-tier-title sponsor-tier-red">Gold Sponsors</h3>
+                    <div class="sponsor-grid">
+                        <div class="sponsor-card sponsor-card-medium">
+                            <div class="sponsor-logo">⚡</div>
+                            <p class="sponsor-name">FutureTech</p>
+                        </div>
+                        <div class="sponsor-card sponsor-card-medium">
+                            <div class="sponsor-logo">🌟</div>
+                            <p class="sponsor-name">StartupX</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Silver Sponsors -->
+                <div class="sponsor-tier">
+                    <h3 class="sponsor-tier-title sponsor-tier-blue">Silver Sponsors</h3>
+                    <div class="sponsor-grid">
+                        <div class="sponsor-card sponsor-card-small">
+                            <div class="sponsor-logo">🎨</div>
+                            <p class="sponsor-name">CreativeStudio</p>
+                        </div>
+                        <div class="sponsor-card sponsor-card-small">
+                            <div class="sponsor-logo">💻</div>
+                            <p class="sponsor-name">DigitalEdge</p>
+                        </div>
+                        <div class="sponsor-card sponsor-card-small">
+                            <div class="sponsor-logo">🔮</div>
+                            <p class="sponsor-name">NextGen</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Partnership CTA -->
+                <div class="partnership-cta">
+                    <h3 class="partnership-title">Want to Partner With Us?</h3>
+                    <p class="partnership-text">Join our amazing sponsors and get your brand in front of 500+ energetic freshers and students!</p>
+                    <button class="partnership-button" onclick="contactSponsor()" aria-label="Become a sponsor">Become a Sponsor</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Section -->
+        <section class="booking-section" id="booking">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Book Your Pass Now!</h2>
+                    <p class="section-subtitle">Don't miss out on the biggest freshers party of the year. Limited passes available!</p>
+                </div>
+
+                <div class="booking-card">
+                    <!-- Price Section -->
+                    <div class="price-section">
+                        <div class="price-card">
+                            <h3 class="price-title">Early Bird Special</h3>
+                            <div class="price-display">
+                                <span class="current-price">₹499</span>
+                                <span class="original-price">₹799</span>
+                                <span class="discount-badge">38% OFF</span>
+                            </div>
+                            <p class="price-note">Limited time offer • Only 50 passes left!</p>
+                        </div>
+                    </div>
+
+                    <!-- Pass Features -->
+                    <div class="pass-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i data-lucide="ticket"></i>
+                            </div>
+                            <h4 class="feature-title">Entry Pass</h4>
+                            <p class="feature-description">Guaranteed entry to the venue</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i data-lucide="users"></i>
+                            </div>
+                            <h4 class="feature-title">Unlimited Food</h4>
+                            <p class="feature-description">Full dinner buffet included</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i data-lucide="star"></i>
+                            </div>
+                            <h4 class="feature-title">VIP Experience</h4>
+                            <p class="feature-description">Premium seating & priority service</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i data-lucide="clock"></i>
+                            </div>
+                            <h4 class="feature-title">Early Access</h4>
+                            <p class="feature-description">Special entry 30 mins before</p>
+                        </div>
+                    </div>
+
+                    <!-- Booking Button -->
+                    <div class="booking-cta">
+                        <button class="booking-button" onclick="bookNow()" aria-label="Book on BookMyShow">
+                            🎫 Book on BookMyShow
+                        </button>
+                        <div class="booking-features">
+                            <span class="booking-feature">✅ Secure Payment</span>
+                            <span class="booking-feature">✅ Instant Confirmation</span>
+                            <span class="booking-feature">✅ Easy Refunds</span>
+                        </div>
+                    </div>
+
+                    <!-- Urgency Banner -->
+                    <div class="urgency-banner">
+                        <div class="urgency-header">
+                            <i data-lucide="clock" class="urgency-icon"></i>
+                            <span class="urgency-text">LIMITED TIME OFFER!</span>
+                        </div>
+                        <p class="urgency-description">
+                            Only <span class="urgency-count">50 passes</span> remaining at this price. 
+                            Price increases to ₹799 after early bird offer ends!
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Help Section -->
+                <div class="help-section">
+                    <h3 class="help-title">Need Help?</h3>
+                    <p class="help-text">Having trouble booking or have questions about the event? We're here to help!</p>
+                    <div class="help-buttons">
+                        <a href="https://wa.me/1234567890" target="_blank" class="help-button help-button-whatsapp">
+                            💬 WhatsApp Support
+                        </a>
+                        <a href="mailto:help@pravesh2k25.com" class="help-button help-button-email">
+                            📧 Email Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer" id="contact">
+            <div class="container">
+                <div class="footer-content">
+                    <!-- Event Info -->
+                    <div class="footer-section">
+                        <h3 class="footer-title">PRAVESH 2K25</h3>
+                        <p class="footer-description">
+                            The ultimate freshers party experience awaits you. Join us for an unforgettable evening 
+                            of celebration, food, and friendships that will last a lifetime.
+                        </p>
+                        <div class="footer-address">
+                            <i data-lucide="map-pin" class="address-icon"></i>
+                            <div class="address-text">
+                                <p class="address-venue">Kameshwar Palace A.C. Banquet Hall</p>
+                                <p class="address-details">
+                                    123 College Street<br>
+                                    University Campus<br>
+                                    City - 123456
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="footer-section">
+                        <h4 class="footer-section-title">Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="#details" class="footer-link">→ Event Details</a></li>
+                            <li><a href="#booking" class="footer-link">→ Book Tickets</a></li>
+                            <li><a href="#sponsors" class="footer-link">→ Sponsors</a></li>
+                            <li><a href="#contact" class="footer-link">→ Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact & Social -->
+                    <div class="footer-section">
+                        <h4 class="footer-section-title">Get In Touch</h4>
+                        <div class="footer-contacts">
+                            <a href="https://instagram.com/pravesh2k25" target="_blank" class="footer-contact">
+                                <i data-lucide="instagram"></i>
+                                <span>@pravesh2k25</span>
+                            </a>
+                            <a href="mailto:info@pravesh2k25.com" class="footer-contact">
+                                <i data-lucide="mail"></i>
+                                <span>info@pravesh2k25.com</span>
+                            </a>
+                            <a href="tel:+919876543210" class="footer-contact">
+                                <i data-lucide="phone"></i>
+                                <span>+91 98765 43210</span>
+                            </a>
+                        </div>
+
+                        <!-- Event Countdown Mini -->
+                        <div class="footer-countdown">
+                            <p class="footer-countdown-label">Next Event</p>
+                            <p class="footer-countdown-date">October 11, 2025</p>
+                            <p class="footer-countdown-time">11:00 AM – 7:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Bar -->
+                <div class="footer-bottom">
+                    <div class="footer-bottom-content">
+                        <div class="footer-copyright">
+                            <p>© 2025 Pravesh 2K25. All rights reserved.</p>
+                            <p class="footer-made-with">Made with ❤️ for the freshers of 2025</p>
+                        </div>
+                        <div class="footer-legal">
+                            <a href="#" class="footer-legal-link">Privacy Policy</a>
+                            <a href="#" class="footer-legal-link">Terms & Conditions</a>
+                            <a href="#" class="footer-legal-link">Refund Policy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <noscript>
+        <div style="background:#1c1c28;color:#fff;padding:12px 16px;text-align:center;">
+            This site works best with JavaScript enabled. Countdown and animations are disabled without JS.
+        </div>
+    </noscript>
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
