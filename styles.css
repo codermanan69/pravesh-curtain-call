@@ -1575,3 +1575,17 @@ section {
     .sponsor-card-medium { width: 120px; height: 86px; }
     .sponsor-card-small { width: 100px; height: 76px; }
 }
+
+/* Disable hover effects on devices that do not support hover */
+@media (hover: none) {
+    .cta-button:hover,
+    .booking-button:hover,
+    .highlight-card:hover,
+    .sponsor-card:hover,
+    .partnership-button:hover,
+    .help-button-whatsapp:hover,
+    .help-button-email:hover {
+        transform: none;
+        box-shadow: none;
+    }
+}

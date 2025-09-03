@@ -197,7 +197,11 @@ function initializeSmoothScrolling(reduceMotion) {
 function bookNow() {
     // Replace with actual BookMyShow URL when available
     const bookingUrl = 'https://in.bookmyshow.com';
-    window.open(bookingUrl, '_blank');
+    const newWin = window.open(bookingUrl, '_blank');
+    if (!newWin) {
+        // Popup blocked; fallback to same-tab navigation
+        window.location.href = bookingUrl;
+    }
     
     // Track booking attempt (you can add analytics here)
     console.log('Booking attempt tracked');
